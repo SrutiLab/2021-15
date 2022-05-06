@@ -1,0 +1,55 @@
+import java.util.Scanner;
+class employee
+{
+    int eNo;
+    String eName;
+    int eSalary;
+
+ void getinput()
+   {
+        Scanner obj = new Scanner(System.in);
+        System.out.println("Enter employee No : ");
+        eNo = obj.nextInt();
+        System.out.println("Enter employee Name : ");
+        eName = obj.next();
+        System.out.println("Enter monthly salary : ");
+        eSalary = obj.nextInt();
+    }
+
+void display()
+    {
+	System.out.println("Employee  No:="+eNo);
+	System.out.println("Empoyee Name="+eName);
+	System.out.println("Emloyee Salary="+eSalary);
+    }
+}
+
+class main1
+{
+   public static void main(String args[])
+     {
+	int i;
+	employee e[ ]=new employee[3];
+	System.out.println("enter the employee details: ");
+	for(i=0;i<3;i++)
+	   {
+		e[i]=new employee();
+  		e[i].getinput();
+	   }
+	for(i=0;i<3;i++)
+	  {
+ 		e[i].display();
+	   }
+    
+	Scanner inp=new Scanner(System.in);
+	System.out.println("Enter the Employee No: to search");
+	int n=inp.nextInt();
+	for(i=0;i<3;i++)
+	{
+	if(e[i].eNo==n)
+	 {
+	    e[i].display();
+	 }
+	}
+     }
+}
