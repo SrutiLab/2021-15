@@ -1,0 +1,28 @@
+class complex
+{
+  int r;
+  int i;
+  	complex(int real,int img)
+	   {
+	     r=real;
+	     i=img;
+     }
+  	void add(complex o1,complex o2)
+       {
+ 	complex temp=new complex(0,0);
+  	temp.r=o1.r+o2.r;
+  	temp.i=o1.i+o2.i;
+  	System.out.println(temp.r+"+"+temp.i+"i");
+       }
+}
+
+class main
+ {
+	public static void main(String args[]) 
+	{
+	complex o1=new complex(5,8);
+	complex o2=new complex(3,1);
+	complex o3=new complex(0,0);
+	o3.add(o1,o2);
+	}
+}
