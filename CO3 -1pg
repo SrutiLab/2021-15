@@ -1,0 +1,51 @@
+import java.util.Scanner;
+class Shapes
+{
+int recarea,sqarea,l,b,a;
+	Shapes(int x,int y)
+	{
+		l=x;
+		b=y;
+		recarea=l*b;
+		System.out.println("Area of rectangle"+recarea);
+	}
+	Shapes(int z)
+	{
+		a=z;
+		sqarea=a*a;
+		System.out.println("area of square is "+sqarea);
+	}
+}
+class Circle
+{
+	double r,circlearea;
+	void show(double a)
+	{
+    		r=a;
+		circlearea=3.14*r*r;
+	}
+	void show()
+	{
+		System.out.println("area of circle is"+circlearea);
+	}
+}
+
+class main
+{
+public static void main(String args[])
+  {
+	Scanner input=new Scanner(System.in);
+	System.out.println("enter the length and breath of the rectangle");	
+	int p=input.nextInt();
+	int q=input.nextInt();
+	System.out.println("enter the sides of the square");
+	int s=input.nextInt();
+	System.out.println("enter the radius of circle");
+	double t=input.nextDouble();
+	Shapes s1=new Shapes(p,q);
+	Shapes s2=new Shapes(s);
+	Circle c1=new Circle();
+	c1.show(t);
+	c1.show();
+  }
+}
