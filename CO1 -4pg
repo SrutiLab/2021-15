@@ -1,0 +1,36 @@
+class CPU
+  {
+     int price;
+      CPU(int p)
+         {
+          System.out.println("Price of CPU : " +p);
+	 }
+class Processor
+  {
+   String cores;
+   String manufacture;
+      Processor(String n, String m)
+       {
+        System.out.println("No of Cores : " +n);
+        System.out.println("Processor manufactures : " + m);
+       }
+  }
+static class Ram
+{
+  static String memory;
+  static int price;
+  static String manufacture;
+     Ram(String n, int m,String o)
+       {
+         System.out.println("Memory Size : " +n);
+         System.out.println("Memory price : " +m);
+         System.out.println("Memory manufactures : " +o);
+       }
+}
+public static void main(String[] args)
+   {
+        CPU i= new CPU(53000);
+        CPU.Processor c_processor = i.new Processor("i3", "intel");
+        CPU.Ram c_ram = new Ram("1TB",8600, "HP");
+    }
+}
